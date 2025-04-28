@@ -20,7 +20,7 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme()
 
   return (
-    <nav className='flex justify-between p-4 items-center'>
+    <nav className='flex justify-between p-4 items-center sticky top-0 bg-background z-10'>
       {/* LEFT  */}
       <SidebarTrigger className='cursor-pointer' />
       {/* RIGHT  */}
@@ -63,7 +63,7 @@ const Navbar = () => {
           <DropdownMenuTrigger>
             <Avatar>
               <AvatarImage
-                src='https://github.com/shadcn.png'
+                src='https://avatars.githubusercontent.com/u/35189684?v=4'
                 className='cursor-pointer'
               />
               <AvatarFallback>CN</AvatarFallback>

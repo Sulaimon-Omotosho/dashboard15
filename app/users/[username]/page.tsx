@@ -1,5 +1,7 @@
+import AppLineChart from '@/components/AppLineChart'
 import CardList from '@/components/CardList'
 import EditUser from '@/components/EditUser'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import {
   Breadcrumb,
@@ -30,7 +32,7 @@ const SingleUserPage = () => {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbLink href='/components'>Users</BreadcrumbLink>
+            <BreadcrumbLink href='/users'>Users</BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
@@ -157,10 +159,26 @@ const SingleUserPage = () => {
         {/* RIGHT */}
         <div className='w-full xl:w-2/3 space-y-6'>
           {/* USER CARD CONTAINER  */}
-          <div className='bg-primary-foreground p-4 rounded-lg'>USER CARD</div>
+          <div className='bg-primary-foreground p-4 rounded-lg space-y-2'>
+            <div className=''>
+              <Avatar className='size-12'>
+                <AvatarImage src='https://avatars.githubusercontent.com/u/35189684?v=4' />
+                <AvatarFallback>US</AvatarFallback>
+              </Avatar>
+              <h1 className='text-xl font-semibold'>Uncle Sula</h1>
+            </div>
+            <p className='text-sm text-muted-foreground'>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
+              ipsa error, aspernatur temporibus veniam itaque sapiente tenetur
+              illum enim ex dicta expedita, porro assumenda sint!
+            </p>
+          </div>
 
           {/* CHART CONTAINER  */}
-          <div className='bg-primary-foreground p-4 rounded-lg'>CHART</div>
+          <div className='bg-primary-foreground p-4 rounded-lg'>
+            <h1 className='text-xl font-semibold'>User Activity</h1>
+            <AppLineChart />
+          </div>
         </div>
       </div>
     </div>
